@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="ip_address" default="192.168.0.159"/>
+  <arg name="port" default="502"/>
+  
+  <node pkg="wattius_bms" type="wattius_bms_node.py" name="wattius_bms" output="screen">
+	  <param name="port" value="$(arg port)"/>
+	  <param name="ip_address" value="$(arg ip_address)"/>
+  </node>
+
+</launch>
